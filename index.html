@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Sayyida's Lift Club" />
+    <meta name="theme-color" content="#0f1115" />
+    <link rel="apple-touch-icon" href="/sayyidas-lift-club-app/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/sayyidas-lift-club-app/icons/icon-192.png" />
+    <title>Sayyida's Lift Club</title>
+    <!-- Launch screen styles live here, not in the app CSS, so they apply
+         before any script or stylesheet has loaded. -->
+    <style>html,body{background:#0f1115;margin:0}html[data-theme=light],html[data-theme=light] body,html[data-theme=light] #splash{background:#f4f5f8}#splash{z-index:1000;background:#0f1115;place-content:center;justify-items:center;gap:18px;transition:opacity .35s;display:grid;position:fixed;inset:0}#splash img{border-radius:30px;width:132px;height:132px;box-shadow:0 10px 30px #00000080}#splash p{letter-spacing:.08em;text-transform:uppercase;color:#8a90a2;margin:0;font:400 13px/1 ui-monospace,Menlo,monospace}#splash.is-hidden{opacity:0}</style>
+    <script>
+      // Same as src/lib/theme.ts, early so the launch screen is the right color.
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || (t === 'auto' && matchMedia('(prefers-color-scheme: light)').matches)) {
+          document.documentElement.dataset.theme = 'light';
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f4f5f8');
+        }
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/sayyidas-lift-club-app/assets/index-DwdqLtEU.js"></script>
+    <link rel="stylesheet" crossorigin href="/sayyidas-lift-club-app/assets/index-D-Cqb9Ik.css">
+  <link rel="manifest" href="/sayyidas-lift-club-app/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/sayyidas-lift-club-app/registerSW.js"></script></head>
+  <body>
+    <div id="splash" aria-hidden="true">
+      <img src="/sayyidas-lift-club-app/icons/icon-512.png" alt="" />
+      <p>Sayyida's Lift Club</p>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>
