@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/sayyidas-lift-club-app/sw.js', { scope: '/sayyidas-lift-club-app/' })})}
